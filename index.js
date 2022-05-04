@@ -4,7 +4,7 @@ let deliveryMonth;
 let deliveryMonthNumber;
 
 function getConceptionMonthNumber() {
-    switch (conceptionMonth.toLocaleLowerCase()) {
+    switch (conceptionMonth.toLowerCase()) {
         case "january":
             conceptionMonthNumber = 1;
             break;
