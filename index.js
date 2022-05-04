@@ -1,97 +1,37 @@
 let conceptionMonth = prompt("Which month did you conceive?", "Example: March");
-let conceptionMonthNumber;
 let deliveryMonth;
-let deliveryMonthNumber;
-
-function getConceptionMonthNumber() {
-    switch (conceptionMonth.toLowerCase()) {
-        case "january":
-            conceptionMonthNumber = 1;
-            break;
-        case "february":
-            conceptionMonthNumber = 2;
-            break;
-        case "march":
-            conceptionMonthNumber = 3;
-            break;
-        case "april":
-            conceptionMonthNumber = 4;
-            break;
-        case "may":
-            conceptionMonthNumber = 5;
-            break;
-        case "june":
-            conceptionMonthNumber = 6;
-            break;
-        case "july":
-            conceptionMonthNumber = 7;
-            break;
-        case "august":
-            conceptionMonthNumber = 8;
-            break;
-        case "september":
-            conceptionMonthNumber = 9;
-            break;
-        case "october":
-            conceptionMonthNumber = 10;
-            break;
-        case "november":
-            conceptionMonthNumber = 11;
-            break;
-        case "december":
-            conceptionMonthNumber = 12;
-            break;
-        default:
-            alert("Invalid month.");
-            break;
-    }
-}
 
 function getDeliveryMonth() {
-    deliveryMonthNumber = conceptionMonthNumber + 9;
-    switch (deliveryMonthNumber) {
-        case 10:
-            deliveryMonth = "October";
-            break;
-        case 11:
-            deliveryMonth = "November";
-            break;
-        case 12:
-            deliveryMonth = "December";
-            break;
-        case 13:
-            deliveryMonth = "January";
-            break;
-        case 14:
-            deliveryMonth = "February";
-            break;
-        case 15:
-            deliveryMonth = "March";
-            break;
-        case 16:
-            deliveryMonth = "April";
-            break;
-        case 17:
-            deliveryMonth = "May";
-            break;
-        case 18:
-            deliveryMonth = "June";
-            break;
-        case 19:
-            deliveryMonth = "July";
-            break;
-        case 20:
-            deliveryMonth = "August";
-            break;
-        case 21:
-            deliveryMonth = "September";
-            break;
-        default:
-            break;
+    if (conceptionMonth.toLowerCase() === "january") {
+        deliveryMonth = "October";
+    } else if (conceptionMonth.toLowerCase() === "february") {
+        deliveryMonth = "November";
+    } else if (conceptionMonth.toLowerCase() === "march") {
+        deliveryMonth = "December";
+    } else if (conceptionMonth.toLowerCase() === "april") {
+        deliveryMonth = "January";
+    } else if (conceptionMonth.toLowerCase() === "may") {
+        deliveryMonth = "February";
+    } else if (conceptionMonth.toLowerCase() === "june") {
+        deliveryMonth = "March";
+    } else if (conceptionMonth.toLowerCase() === "july") {
+        deliveryMonth = "April";
+    } else if (conceptionMonth.toLowerCase() === "august") {
+        deliveryMonth = "May";
+    } else if (conceptionMonth.toLowerCase() === "september") {
+        deliveryMonth = "June";
+    } else if (conceptionMonth.toLowerCase() === "october") {
+        deliveryMonth = "July";
+    } else if (conceptionMonth.toLowerCase() === "november") {
+        deliveryMonth = "August";
+    } else if (conceptionMonth.toLowerCase() === "december") {
+        deliveryMonth = "September";
+    } else {
+        alert("Invalid month.");
+        deliveryMonth = "unknown";
     }
 }
 
-getConceptionMonthNumber();
 getDeliveryMonth();
 
 console.log(`Your expected delivery month is ${deliveryMonth}.`);
